@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+
+  html {
+    @apply font-body antialiased;
+  }
+
+  .container {
+    max-width: 600px;
+
+    @screen sm {
+      max-width: 700px;
+    }
+
+    @screen md {
+      max-width: 850px; 
+    }
+  }
+}
+
+@layer base {
+
+  #root {
+    @apply h-screen
+  }
+
+  body {
+    @apply flex flex-col 
+  }
+
+  main {
+    @apply h-full flex flex-col justify-between 
+  }
+
+  footer {
+    @apply container mx-auto py-6 flex flex-col items-center
+  }
+
+  footer span {
+    @apply flex mx-auto gap-6 items-center;
+  }
+
+  footer a {
+    @apply text-4xl text-primary transition-colors hover:text-secondary dark:text-white dark:hover:text-secondary
+  }
+
+
+  /* Navbar */
+  nav {
+    @apply  container flex justify-between py-6 mb-4 
+            prose-a:relative prose-a:z-30 prose-a:block prose-a:px-2 prose-a:font-body 
+            prose-a:text-base prose-a:md:text-lg prose-a:font-medium 
+            prose-a:text-primary prose-a:transition-colors prose-a:dark:text-white
+            prose-ul:flex prose-ul:items-center
+            prose-li:relative prose-li:mb-1
+            prose-figure:absolute prose-figure:left-0 prose-figure:bottom-0 prose-figure:z-20 
+            prose-figure:h-0 prose-figure:w-full  prose-figure:opacity-75 transition-all
+            text-primary dark:text-white
+  }
+
+  #nav-logo {
+    @apply flex items-center font-bold text-xl sm:text-2xl
+  }
+
+
+
+  .footer-container {
+    @apply flex flex-col items-center gap-2  justify-between   border-grey-lighter py-4
+  }
+
+
+  .page-header {
+    @apply flex flex-col gap-4 pb-4 
+  }
+  
+
+  .home-header { 
+    @apply   border-grey-lighter pb-5 flex flex-col
+  }
+
+  .home-header img {
+    @apply rounded-full h-60 w-60 object-cover self-center
+  }
+
+  .home-header p {
+    @apply  pt-4 flex  w-fit font-body max-w-sm mx-auto text-xl font-light text-primary dark:text-white   text-center
+  }
+
+  .home-header a {
+    @apply mt-5 block bg-secondary w-full max-w-sm py-4 mx-auto text-center font-body text-xl font-semibold text-white transition-colors hover:bg-green   sm:text-2xl
+  }
+
+  .home-header h1 {
+    @apply pt-4 font-body text-4xl font-semibold text-primary dark:text-white text-center 
+  }
+
+  .home-section {
+    @apply border-b border-grey-lighter flex flex-col gap-2 py-6 max-w-md mx-auto
+  }
+
+  .post {
+    @apply border border-grey-lighter py-4 flex flex-col gap-3 shadow-xl rounded-b-xl 
+  }
+
+  .post-category {
+    @apply inline-block rounded-full bg-green-light px-3 mx-2 py-1 w-fit font-body text-sm text-green hover:text-green-dark
+  }
+
+  .post-title {
+    @apply block font-body text-lg font-semibold text-primary  mx-2 transition-colors hover:text-green dark:text-white dark:hover:text-secondary
+  } 
+
+  .post-subcontent {
+    @apply flex items-center  mx-2 pt-4 gap-4 font-light dark:text-white
+  }
+
+
+
+  .section-header {
+    @apply flex gap-1
+  }
+
+  .section-header span {
+    @apply text-4xl lg:text-5xl flex justify-center items-center  text-secondary
+  }
+
+  .section-header h1 {
+    @apply font-body text-4xl flex items-end  pt-1 font-semibold text-primary dark:text-white lg:text-5xl
+  }
+
+
+
+
+
+
+}
+
